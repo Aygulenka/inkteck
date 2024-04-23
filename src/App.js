@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+// App.js
+import React from 'react';
 import './App.css';
+import MainScreen from './components/MainScreen';
+import LearningModule from './components/LearningModule';
+import TestModule from './components/TestModule';
+import Header from './components/Header';
+import AdmPanel from './components/AdmPanel'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Changed BrowserRoute to BrowserRouter
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+
+        <Routes>
+          <Route path="/" element={<MainScreen />} /> {/* Removed element prop */}
+          <Route path="/learn" element={<LearningModule />} /> {/* Removed element prop */}
+          <Route path="/test" element={<TestModule />} /> {/* Removed element prop */}
+       <Route path="/admPanel" element = {<AdmPanel/>}/>
+        </Routes>
+
     </div>
   );
 }

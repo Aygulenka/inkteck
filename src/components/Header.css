@@ -1,0 +1,10 @@
+.header{
+    min-height: 10%;
+    background: #100f59;
+    display: flex;
+    justify-content: space-between;
+}
+.home-link{
+    margin: 10px;
+    color: white;
+}
