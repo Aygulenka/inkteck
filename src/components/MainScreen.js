@@ -14,6 +14,7 @@ function MainScreen() {
     <div className="main-screen">
       <h1>Добро пожаловать на страницу обучения </h1>
       <p>Тут ты найдешь персональный план обученияи многое другое</p>
+
       <LearningProgress/>
       {/* <button onClick={goToLearn}>Перейти к обучению</button>
       <p>Тут ты найдешь персональный план обучения</p> */}
